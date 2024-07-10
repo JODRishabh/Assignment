@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+{%block title%}Home{%endblock%}
+<link rel="stylesheet" href="{%static 'style.css'%}">
+
+{%block content%}
+<h1 class="heading">Assignment</h1>
+<h3 id = "time">Live Time : {{current_datetime}}</h3>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input class="button" type="submit" value="Submit">
+</form>
+
+
+
+{%endblock%}
